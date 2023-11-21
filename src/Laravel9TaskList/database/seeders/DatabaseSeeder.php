@@ -14,7 +14,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        /* call seeder list */
+        $this->call(FoldersTableSeeder::class);
+        $this->call(TasksTableSeeder::class);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
