@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\CreateFolder;
 use App\Models\Folder;
+use App\Http\Requests\CreateFolder;
 
 
 class FolderController extends Controller
@@ -28,6 +28,7 @@ class FolderController extends Controller
      *  POST /folders/create
      *  @param CreateFolder $request （Requestクラスの機能は引き継がれる）
      *  @return \Illuminate\Http\RedirectResponse
+     *  @var App\Http\Requests\CreateFolder
      */
     public function create(CreateFolder $request)
     {
