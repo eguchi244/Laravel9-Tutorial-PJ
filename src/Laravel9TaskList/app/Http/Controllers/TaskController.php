@@ -47,13 +47,14 @@ class TaskController extends Controller
     }
 
     /**
-     *  【タスクを新規作成してDBに書き込む処理】
-     *  機能：タスクを新規作成してDBに書き込む処理をしてタスク一覧にリダイレクトする
+     *  【タスクの作成機能】
+     *  機能：タスクが新規作成されたらDBに書き込む処理をしてタスク一覧にリダイレクトする
      *
      *  POST /folders/{id}/tasks/create
      *  @param int $id
      *  @param CreateTask $request
      *  @return \Illuminate\Http\RedirectResponse
+     *  @var App\Http\Requests\CreateTask
      */
     public function create(int $id, CreateTask $request)
     {
