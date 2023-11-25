@@ -8,7 +8,6 @@ class TaskController extends Controller
 {
     /**
      *  【タスク一覧ページの表示機能】
-     *  機能：フォルダとタスクのデータをDBから取得してタスク一覧ページに渡して表示する
      *
      *  GET /folders/{id}/tasks
      *  @param int $id
@@ -20,7 +19,7 @@ class TaskController extends Controller
 
         return view('tasks/index', [
             'folders' => $folders,
-            "current_folder_id"=>$id
+            "current_folder_id" => $id
         ]);
     }
 }
