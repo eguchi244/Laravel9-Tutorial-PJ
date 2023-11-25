@@ -9,7 +9,6 @@ class TaskController extends Controller
 {
     /**
      *  【タスク一覧ページの表示機能】
-     *  機能：フォルダとタスクのデータをDBから取得してタスク一覧ページに渡して表示する
      *
      *  GET /folders/{id}/tasks
      *  @param int $id
