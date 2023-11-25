@@ -14,7 +14,6 @@ class Folder extends Model
 
     /*
     * フォルダクラスとタスククラスを関連付けするメソッド
-    * 機能 : フォルダクラスの関係性を辿ってタスククラスのリストを取得する
     *
     * @return \Illuminate\Database\Eloquent\Relations\HasMany
     */

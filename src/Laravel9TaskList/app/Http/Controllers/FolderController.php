@@ -11,7 +11,6 @@ class FolderController extends Controller
 {
     /**
      *  【フォルダ作成ページの表示機能】
-     *  機能：フォルダの新規作成ページの画面を表示する
      *
      *  GET /folders/create
      *  @return \Illuminate\View\View
@@ -22,8 +21,7 @@ class FolderController extends Controller
     }
 
     /**
-     *  【フォルダを新規作成してDBに書き込む処理】
-     *  機能：フォルダを新規作成してDBに書き込む処理をしてタスク一覧にリダイレクトする
+     *  【フォルダの作成機能】
      *
      *  POST /folders/create
      *  @param CreateFolder $request （Requestクラスの機能は引き継がれる）
