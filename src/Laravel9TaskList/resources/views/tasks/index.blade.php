@@ -34,7 +34,7 @@
                                     </a>
                                 </td>
                                 <td><a href="{{ route('folders.edit', ['id' => $folder->id]) }}">編集</a></td>
-                                <td><a href="#">削除</a></td>
+                                <td><a href="{{ route('folders.delete', ['id' => $folder->id]) }}">削除</a></td>
                             </tr>
                             @endforeach
                         </table>
