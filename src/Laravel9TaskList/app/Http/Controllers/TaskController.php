@@ -11,7 +11,6 @@ class TaskController extends Controller
 {
     /**
      *  【タスク一覧ページの表示機能】
-     *  機能：フォルダとタスクのデータをDBから取得してタスク一覧ページに渡して表示する
      *
      *  GET /folders/{id}/tasks
      *  @param int $id
@@ -34,7 +33,6 @@ class TaskController extends Controller
 
     /**
      *  【タスク作成ページの表示機能】
-     *  機能：タスクの新規作成ページの画面を表示する
      *
      *  GET /folders/{id}/tasks/create
      *  @param int $id
@@ -49,7 +47,6 @@ class TaskController extends Controller
 
     /**
      *  【タスクの作成機能】
-     *  機能：タスクが新規作成されたらDBに書き込む処理をしてタスク一覧にリダイレクトする
      *
      *  POST /folders/{id}/tasks/create
      *  @param int $id
@@ -73,7 +70,6 @@ class TaskController extends Controller
 
     /**
      *  【タスク編集ページの表示機能】
-     *  機能：タスクIDをフォルダ編集ページに渡して表示する
      *
      *  GET /folders/{id}/tasks/{task_id}/edit
      *  @param int $id
@@ -91,7 +87,6 @@ class TaskController extends Controller
 
     /**
      *  【タスクの編集機能】
-     *  機能：タスクが編集されたらDBを更新処理をしてタスク一覧にリダイレクトする
      *
      *  POST /folders/{id}/tasks/{task_id}/edit
      *  @param int $id
