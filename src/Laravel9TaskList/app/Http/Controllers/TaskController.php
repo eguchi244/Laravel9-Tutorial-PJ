@@ -107,4 +107,40 @@ class TaskController extends Controller
             'id' => $task->folder_id,
         ]);
     }
+
+    /**
+     *  【タスク削除ページの表示機能】
+     *
+     *  GET /folders/{id}/tasks/{task_id}/delete
+     *  @param int $id
+     *  @param int $task_id
+     *  @return \Illuminate\View\View
+     */
+    public function showDeleteForm(int $id, int $task_id)
+    {
+        $task = Task::find($task_id);
+
+        return view('tasks/delete', [
+            'task' => $task,
+        ]);
+    }
+
+    /**
+     *  【タスクの削除機能】
+     *
+     *  POST /folders/{id}/tasks/{task_id}/delete
+     *  @param int $id
+     *  @param int $task_id
+     *  @return \Illuminate\View\View
+     */
+    public function delete(int $id, int $task_id)
+    {
+        $task = Task::find($task_id);
+
+        $task->delete();
+
+        return redirect()->route('tasks.index', [
+            'id' => $task->folder_id
+        ]);
+    }
 }
