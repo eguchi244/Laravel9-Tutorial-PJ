@@ -11,7 +11,6 @@ class FolderController extends Controller
 {
     /**
      *  【フォルダ作成ページの表示機能】
-     *  機能：フォルダの新規作成ページの画面を表示する
      *
      *  GET /folders/create
      *  @return \Illuminate\View\View
@@ -23,7 +22,6 @@ class FolderController extends Controller
 
     /**
      *  【フォルダの作成機能】
-     *  機能：フォルダが新規作成されたらDBに書き込む処理をしてタスク一覧にリダイレクトする
      *
      *  POST /folders/create
      *  @param CreateFolder $request （Requestクラスの機能は引き継がれる）
@@ -43,7 +41,6 @@ class FolderController extends Controller
 
     /**
      *  【フォルダ編集ページの表示機能】
-     *  機能：フォルダIDをフォルダ編集ページに渡して表示する
      *
      *  GET /folders/{id}/edit
      *  @param int $id
@@ -61,7 +58,6 @@ class FolderController extends Controller
 
     /**
      *  【フォルダの編集機能】
-     *  機能：フォルダが編集されたらDBを更新処理をしてタスク一覧にリダイレクトする
      *
      *  POST /folders/{id}/edit
      *  @param int $id
@@ -82,7 +78,6 @@ class FolderController extends Controller
 
     /**
      *  【フォルダ削除ページの表示機能】
-     *  機能：フォルダIDをフォルダ編集ページに渡して表示する
      *
      *  GET /folders/{id}/delete
      *  @param int $id
@@ -100,7 +95,6 @@ class FolderController extends Controller
 
     /**
      *  【フォルダの削除機能】
-     *  機能：フォルダが削除されたらDBから削除し、フォルダ一覧にリダイレクトする
      *
      *  POST /folders/{id}/delete
      *  @param int $id
