@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\FolderController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,9 @@ use App\Http\Controllers\FolderController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/* home page */
+Route::get('/', [HomeController::class,"index"])->name('home');
 
 /* index page */
 Route::get("/folders/{id}/tasks", [TaskController::class,"index"])->name("tasks.index");
@@ -46,3 +51,6 @@ Route::post('/folders/{id}/tasks/{task_id}/edit', [TaskController::class,"edit"]
 /* tasks new delete page */
 Route::get('/folders/{id}/tasks/{task_id}/delete', [TaskController::class,"showDeleteForm"])->name('tasks.delete');
 Route::post('/folders/{id}/tasks/{task_id}/delete', [TaskController::class,"delete"]);
+
+/* certification page （会員登録・ログイン・ログアウト・パスワード再設定など） */
+Auth::routes();
