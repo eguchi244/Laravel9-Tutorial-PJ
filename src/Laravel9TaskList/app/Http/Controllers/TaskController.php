@@ -20,13 +20,13 @@ class TaskController extends Controller
     {
         $folders = Folder::all();
 
-        $current_folder = Folder::find($id);
+        $folder = Folder::find($id);
 
-        $tasks = $current_folder->tasks()->get();
+        $tasks = $folder->tasks()->get();
 
         return view('tasks/index', [
             'folders' => $folders,
-            'current_folder_id' => $current_folder->id,
+            'folder_id' => $folder->id,
             'tasks' => $tasks
         ]);
     }
@@ -56,15 +56,15 @@ class TaskController extends Controller
      */
     public function create(int $id, CreateTask $request)
     {
-        $current_folder = Folder::find($id);
+        $folder = Folder::find($id);
 
         $task = new Task();
         $task->title = $request->title;
         $task->due_date = $request->due_date;
-        $current_folder->tasks()->save($task);
+        $folder->tasks()->save($task);
 
         return redirect()->route('tasks.index', [
-            'id' => $current_folder->id,
+            'id' => $folder->id,
         ]);
     }
 
