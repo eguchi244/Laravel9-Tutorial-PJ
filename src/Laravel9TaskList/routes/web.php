@@ -32,27 +32,27 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/', [HomeController::class,"index"])->name('home');
 
     /* index page */
-    Route::get("/folders/{id}/tasks", [TaskController::class,"index"])->name("tasks.index");
+    Route::get("/folders/{folder}/tasks", [TaskController::class,"index"])->name("tasks.index");
 
     /* folders new create page */
     Route::get('/folders/create', [FolderController::class,"showCreateForm"])->name('folders.create');
     Route::post('/folders/create', [FolderController::class,"create"]);
 
     /* folders new edit page */
-    Route::get('/folders/{id}/edit', [FolderController::class,"showEditForm"])->name('folders.edit');
-    Route::post('/folders/{id}/edit', [FolderController::class,"edit"]);
+    Route::get('/folders/{folder}/edit', [FolderController::class,"showEditForm"])->name('folders.edit');
+    Route::post('/folders/{folder}/edit', [FolderController::class,"edit"]);
 
     /* folders new delete page */
-    Route::get('/folders/{id}/delete', [FolderController::class,"showDeleteForm"])->name('folders.delete');
-    Route::post('/folders/{id}/delete', [FolderController::class,"delete"]);
+    Route::get('/folders/{folder}/delete', [FolderController::class,"showDeleteForm"])->name('folders.delete');
+    Route::post('/folders/{folder}/delete', [FolderController::class,"delete"]);
 
     /* tasks new create page */
-    Route::get('/folders/{id}/tasks/create', [TaskController::class,"showCreateForm"])->name('tasks.create');
-    Route::post('/folders/{id}/tasks/create', [TaskController::class,"create"]);
+    Route::get('/folders/{folder}/tasks/create', [TaskController::class,"showCreateForm"])->name('tasks.create');
+    Route::post('/folders/{folder}/tasks/create', [TaskController::class,"create"]);
 
     /* tasks new edit page */
     Route::get('/folders/{id}/tasks/{task_id}/edit', [TaskController::class,"showEditForm"])->name('tasks.edit');
-    Route::post('/folders/{id}/tasks/{task_id}/edit', [TaskController::class,"edit"]);
+    Route::post('/folders/{folder}/tasks/{task_id}/edit', [TaskController::class,"edit"]);
 
     /* tasks new delete page */
     Route::get('/folders/{id}/tasks/{task_id}/delete', [TaskController::class,"showDeleteForm"])->name('tasks.delete');

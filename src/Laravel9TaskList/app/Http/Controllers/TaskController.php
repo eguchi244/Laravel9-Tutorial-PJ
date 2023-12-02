@@ -13,16 +13,15 @@ class TaskController extends Controller
     /**
      *  【タスク一覧ページの表示機能】
      *
-     *  GET /folders/{id}/tasks
-     *  @param int $id
+     *  GET /folders/{folder}/tasks
+     *  @param Folder $folder
      *  @return \Illuminate\View\View
      */
-    public function index(int $id)
+    public function index(Folder $folder)
     {
-        $folders = Folder::all();
-
-        $folder = Folder::find($id);
-
+        /** @var App\Models\User **/
+        $user = auth()->user();
+        $folders = $user->folders()->get();
         $tasks = $folder->tasks()->get();
 
         return view('tasks/index', [
