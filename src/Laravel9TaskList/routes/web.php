@@ -51,12 +51,12 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/folders/{folder}/tasks/create', [TaskController::class,"create"]);
 
     /* tasks new edit page */
-    Route::get('/folders/{id}/tasks/{task_id}/edit', [TaskController::class,"showEditForm"])->name('tasks.edit');
-    Route::post('/folders/{folder}/tasks/{task_id}/edit', [TaskController::class,"edit"]);
+    Route::get('/folders/{folder}/tasks/{task}/edit', [TaskController::class,"showEditForm"])->name('tasks.edit');
+    Route::post('/folders/{folder}/tasks/{task}/edit', [TaskController::class,"edit"]);
 
     /* tasks new delete page */
-    Route::get('/folders/{id}/tasks/{task_id}/delete', [TaskController::class,"showDeleteForm"])->name('tasks.delete');
-    Route::post('/folders/{id}/tasks/{task_id}/delete', [TaskController::class,"delete"]);
+    Route::get('/folders/{folder}/tasks/{task}/delete', [TaskController::class,"showDeleteForm"])->name('tasks.delete');
+    Route::post('/folders/{folder}/tasks/{task}/delete', [TaskController::class,"delete"]);
 });
 
 /* certification page （会員登録・ログイン・ログアウト・パスワード再設定など） */
