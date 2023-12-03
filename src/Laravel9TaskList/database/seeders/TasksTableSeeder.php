@@ -7,8 +7,6 @@ use Illuminate\Database\Seeder;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
-use App\Models\Folder;
 
 class TasksTableSeeder extends Seeder
 {

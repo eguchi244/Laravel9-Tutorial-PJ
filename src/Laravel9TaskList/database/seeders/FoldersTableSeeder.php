@@ -42,6 +42,5 @@ class FoldersTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ]);
         }
-
     }
 }
