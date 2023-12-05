@@ -88,11 +88,8 @@ class TaskController extends Controller
 
         /** @var App\Models\User **/
         $user = Auth::user();
-        // $folder = $user->folders()->findOrFail($folder->id);
-        // $task = $folder->tasks()->findOrFail($task->id);
-        $folder = $user->folders()->find($folder->id);
+        $folder = $user->folders()->findOrFail($folder->id);
         $task = $folder->tasks()->findOrFail($task->id);
-
 
         return view('tasks/edit', [
             'task' => $task,
@@ -114,8 +111,6 @@ class TaskController extends Controller
 
         /** @var App\Models\User **/
         $user = Auth::user();
-        // $folder = $user->folders()->findOrFail($folder->id);
-        // $task = $folder->tasks()->findOrFail($task->id);
         $folder = $user->folders()->findOrFail($folder->id);
         $task = $folder->tasks()->findOrFail($task->id);
 
