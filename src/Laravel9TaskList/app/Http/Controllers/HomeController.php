@@ -40,7 +40,7 @@ class HomeController extends Controller
                 'folder' => $folder->id,
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in showCreateForm: ' . $e->getMessage());
+            Log::error('Error HomeController in index: ' . $e->getMessage());
         }
     }
 }

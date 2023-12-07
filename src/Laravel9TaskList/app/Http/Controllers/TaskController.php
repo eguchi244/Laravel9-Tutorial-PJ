@@ -32,7 +32,7 @@ class TaskController extends Controller
                 'tasks' => $tasks
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in index: ' . $e->getMessage());
+            Log::error('Error TaskController in index: ' . $e->getMessage());
         }
     }
 
@@ -54,7 +54,7 @@ class TaskController extends Controller
                 'folder_id' => $folder->id,
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in showCreateForm: ' . $e->getMessage());
+            Log::error('Error TaskController in showCreateForm: ' . $e->getMessage());
         }
     }
 
@@ -83,7 +83,7 @@ class TaskController extends Controller
                 'folder' => $folder->id,
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in create: ' . $e->getMessage());
+            Log::error('Error TaskController in create: ' . $e->getMessage());
         }
     }
 
@@ -109,7 +109,7 @@ class TaskController extends Controller
                 'task' => $task,
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in showEditForm: ' . $e->getMessage());
+            Log::error('Error TaskController in showEditForm: ' . $e->getMessage());
         }
     }
 
@@ -141,7 +141,7 @@ class TaskController extends Controller
                 'folder' => $task->folder_id,
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in edit: ' . $e->getMessage());
+            Log::error('Error TaskController in edit: ' . $e->getMessage());
         }
     }
 
@@ -167,7 +167,7 @@ class TaskController extends Controller
                 'task' => $task,
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in showDeleteForm: ' . $e->getMessage());
+            Log::error('Error TaskController in showDeleteForm: ' . $e->getMessage());
         }
     }
 
@@ -195,7 +195,7 @@ class TaskController extends Controller
                 'folder' => $task->folder_id
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in delete: ' . $e->getMessage());
+            Log::error('Error TaskController in delete: ' . $e->getMessage());
         }
     }
 
