@@ -28,7 +28,7 @@ class FolderController extends Controller
             return view('folders/create');
 
         } catch (\Throwable $e) {
-            Log::error('Error in showCreateForm: ' . $e->getMessage());
+            Log::error('Error FolderController in showCreateForm: ' . $e->getMessage());
         }
     }
 
@@ -54,7 +54,7 @@ class FolderController extends Controller
                 'folder' => $folder->id,
             ]);
         } catch (\Exception $e) {
-            Log::error('Error in create: ' . $e->getMessage());
+            Log::error('Error FolderController in create: ' . $e->getMessage());
         }
     }
 
@@ -77,7 +77,7 @@ class FolderController extends Controller
                 'folder_title' => $folder->title,
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in showEditForm: ' . $e->getMessage());
+            Log::error('Error FolderController in showEditForm: ' . $e->getMessage());
         }
     }
 
@@ -102,7 +102,7 @@ class FolderController extends Controller
                 'folder' => $folder->id,
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in edit: ' . $e->getMessage());
+            Log::error('Error FolderController in edit: ' . $e->getMessage());
         }
     }
 
@@ -144,6 +144,7 @@ class FolderController extends Controller
             $folder = $user->folders()->findOrFail($folder->id);
 
             $folder = DB::transaction(function () use ($folder) {
+                if($folder) throw new \Exception('500');
                 $folder->tasks()->delete();
                 $folder->delete();
                 return $folder;
@@ -155,7 +156,7 @@ class FolderController extends Controller
                 'folder' => $folder->id
             ]);
         } catch (\Throwable $e) {
-            Log::error('Error in delete: ' . $e->getMessage());
+            Log::error('Error FolderController in delete: ' . $e->getMessage());
         }
     }
 }
