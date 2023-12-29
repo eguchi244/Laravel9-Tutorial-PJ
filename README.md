@@ -6,7 +6,7 @@ ZennのWEB書籍を執筆するために制作しました。
 アプリ名：ToDoApp   
 WEB書籍：[Laravel入門 - Laravelを使ってみよう!](https://zenn.dev/eguchi244_dev/books/laravel-tutorial-books)
 
-<img src="img/ToDoApp_IndexPage.png" width="600px">
+<img src="img/ToDoApp_IndexPage.png" width="840px">
 
 ## 制作経緯
 本アプリとWEB書籍はLaravel9のチュートリアル教材として活用したいという気持ちから制作しました。 
