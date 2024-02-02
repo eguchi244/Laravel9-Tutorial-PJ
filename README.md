@@ -145,9 +145,10 @@ root@~# exit
 
 ## 動作確認
 1. ToDoAppのログインテストをする
-- UsersTableSeeder.phpからユーザーアカウントを確認してログインしてください  
+- 下記のユーザーアカウントからログインしてください  
+[Email：dummy@email.com, PassWord：test1234]  
 ブラウザに [http://localhost/login](http://localhost/login) でアクセスしてログインする  
-2. phpMyAdmin（DB管理ツール）　の表示を確認する  
+2. phpMyAdmin（DB管理ツール）の表示を確認する  
 ブラウザに [http://localhost:8080](http://localhost:8080) でアクセスして表示されればOKです。
 3. Mailhog（メールテストサーバ）の表示を確認する   
 ブラウザに [http://localhost:8025](http://localhost:8025) でアクセスして表示されればOKです。
